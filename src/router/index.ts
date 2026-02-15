@@ -1,22 +1,30 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
-import DarkPage from '../views/DarkPage.vue';
-import HomePage from '../views/HomePage.vue';
+import CallsPage from '../views/CallsPage.vue';
+import ChatsPage from '../views/ChatsPage.vue';
+import NewsPage from '../views/NewsPage.vue';
+import SettingsPage from '../views/SettingsPage.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home'
+    name: 'Chats',
+    component: ChatsPage
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: HomePage
+    path: '/news',
+    name: 'News',
+    component: NewsPage
   },
   {
-    path: '/dark',
-    name: 'Dark',
-    component: DarkPage
+    path: '/settings',
+    name: 'Settings',
+    component: SettingsPage
+  },
+  {
+    path: '/calls',
+    name: 'Calls',
+    component: CallsPage
   }
 ]
 
